@@ -30,7 +30,7 @@ public protocol BaseModule {
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath)
     
-    func layoutAttributesForItem(flowLayout: BaseFlowLayout, at indexPath: IndexPath) -> UICollectionViewLayoutAttributes?
+    func layoutAttributesForItem(at indexPath: IndexPath, with layout: ContainerFlowLayout) -> UICollectionViewLayoutAttributes?
     
     func moduleDidLoad()
     func moduleWillAppear(_ animated: Bool)

@@ -119,7 +119,7 @@ extension BaseModule where Self: UIViewController  {
         return .zero
     }
     
-    public func layoutAttributesForItem(flowLayout: BaseFlowLayout, at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+    public func layoutAttributesForItem(at indexPath: IndexPath, with layout: ContainerFlowLayout) -> UICollectionViewLayoutAttributes? {
         return nil
     }
     

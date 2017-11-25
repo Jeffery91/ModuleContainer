@@ -23,14 +23,9 @@ open class ModuleContainerViewController: UIViewController {
     
     var wrapperCells = [Int: ModuleWrapperCell]()
     
-    public var needCustomLayout: Bool = false
     lazy var contentView: UICollectionView = {
-        var layout = UICollectionViewFlowLayout()
-        if self.needCustomLayout {
-            var customLayout = BaseFlowLayout()
-            customLayout.modules = self.modules
-            layout = customLayout
-        }
+        var layout = ContainerFlowLayout()
+        layout.modules = self.modules
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.dataSource = self
         view.delegate = self

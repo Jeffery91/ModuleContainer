@@ -36,4 +36,8 @@ extension Module4: BaseModule {
         cell.label.text = dataSource[indexPath.item]
         return cell
     }
+    
+    func layoutAttributesForItem(at indexPath: IndexPath, with layout: ContainerFlowLayout) -> UICollectionViewLayoutAttributes? {
+        return nil
+    }
 }
