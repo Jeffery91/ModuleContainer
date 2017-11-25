@@ -17,14 +17,14 @@ open class ModuleContainerViewController: UIViewController {
     
     public var messageBus = MessageBus()
     
-    internal var hoverVariable: (Hoverable & UIView)?
+    var hoverVariable: (Hoverable & UIView)?
     
-    internal var modules = [UIViewController & BaseModule]()
+    var modules = [UIViewController & BaseModule]()
     
-    internal var wrapperCells = [Int: ModuleWrapperCell]()
+    var wrapperCells = [Int: ModuleWrapperCell]()
     
     public var needCustomLayout: Bool = false
-    public lazy var contentView: UICollectionView = {
+    lazy var contentView: UICollectionView = {
         var layout = UICollectionViewFlowLayout()
         if self.needCustomLayout {
             var customLayout = BaseFlowLayout()
@@ -54,9 +54,10 @@ open class ModuleContainerViewController: UIViewController {
             modules.append(module)
             module.moduleDidLoad()
         }
-        automaticallyAdjustsScrollViewInsets = false
         view.addSubview(contentView)
-        view.backgroundColor = .white
+        contentView.snp.makeConstraints { (maker) in
+            maker.edges.equalToSuperview()
+        }
         contentView.backgroundColor = .white
         
 //        addObserver(for: contentView)
