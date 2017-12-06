@@ -9,10 +9,10 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://git.haomaiyi.com/Apple/Framework/Foundation/MBaseModule'
+  s.homepage         = 'https://github.com/Jeffery91/ModuleContainer'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'zhangjianfei' => 'zhangjianfei@haomaiyi.com' }
-  s.source           = { :git => 'git@git.haomaiyi.com:Apple/Framework/Foundation/MBaseModule.git', :tag => s.version.to_s }
+  s.author           = { 'zhangjianfei' => 'ahlazjf@163.com' }
+  s.source           = { :git => 'git@github.com:Jeffery91/ModuleContainer.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
 
