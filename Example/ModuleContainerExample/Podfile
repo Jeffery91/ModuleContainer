@@ -8,6 +8,8 @@ project 'ModuleContainerExample.xcodeproj'
 platform :ios, '8.0'
 
 target 'ModuleContainerExample' do
+
    pod 'ModuleContainer' ,:path => '../../ModuleContainer.podspec'
+
 end
 
